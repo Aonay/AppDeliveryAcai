@@ -15,6 +15,7 @@
   <style>
     img{
         margin:80px;
+        border-radius: 50px;
     }
   </style>
   <body>
