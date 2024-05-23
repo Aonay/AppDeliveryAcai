@@ -74,11 +74,12 @@
     </button>
   </div>
 
-  <div class="container p-2">
-    <button type="button" class="btn btn-outline me-2" id="btnOpcoes" style="border: solid 2px; border-radius: 10px; border-color: #800893;">Açai &#127848</button>
-    <button type="button" class="btn btn-outline me-2" id="btnOpcoes" style="border: solid 2px; border-radius: 10px; border-color: #800893;">Sorvetes &#127846</button>
-    <button type="button" class="btn btn-outline me-2" id="btnOpcoes" style="border: solid 2px; border-radius: 10px; border-color: #800893;">Bebidas &#129380</button>
-  </div>
+  <div class="container p-2 d-flex justify-content-center">
+    <button type="button" class="btn btn-outline me-2" id="btnOpcoes" style="border: solid 2px; border-radius: 10px; border-color: #800893;">Açai 🍨</button>
+    <button type="button" class="btn btn-outline me-2" id="btnOpcoes" style="border: solid 2px; border-radius: 10px; border-color: #800893;">Sorvetes 🍦</button>
+    <button type="button" class="btn btn-outline me-2" id="btnOpcoes" style="border: solid 2px; border-radius: 10px; border-color: #800893;">Bebidas 🥤</button>
+</div>
+
 
   <div class="d-flex">
     <div class="card m-1 " style="width: 100%;">
