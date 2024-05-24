@@ -26,6 +26,10 @@
     border-color: orange;
     transition: 0.8s;
   }
+
+  .custom-card-width{
+    max-width:75%;
+  }
 </style>
 
 <body>
@@ -134,7 +138,8 @@
     </div>
   </div>
 
-      <!-- Modal -->
+      <!-- MODAL LOGIN -->
+      
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -146,7 +151,7 @@
 
               <div class="container d-flex justify-content-center align-items-center">
                 <div class="content">
-                  <div class="card mb-3" id="card" style="max-width: 540px; border: 0.5px solid; border-radius: 10px;  border-color: #800893;">
+                  <div class="card mb-3" id="card" style=" border: 0.5px solid; border-radius: 10px;  border-color: #800893;">
                     <div class="row g-0">
                       <div class="col-md-4">
 
@@ -182,12 +187,74 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-              <button type="button" class="btn btn-primary" style="background-color: #851895; border-color: white;">Criar Cadastro</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalCadastro" style="background-color: #851895; border-color: white;">Criar Cadastro</button>
             </div>
           </div>
         </div>
       </div>
 
+
+  <!-- MODAL CADASTRO -->
+
+
+  <div class="modal fade" id="ModalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Faça seu Cadastro</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="container d-flex justify-content-center align-items-center">
+                <div class="content">
+                  <div class="card mb-3" id="card" style="max-width: 540px; border: 0.5px solid; border-radius: 10px;  border-color: #800893;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+
+                      </div>
+                      <div class="col-md-8">
+                      <form action="redirecionar.php" method="post">
+                          <div class="card-body w-100">
+                          <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label">Nome Completo:</label>
+                              <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br" style="border-color: #800893;">
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">CPF:</label>
+                              <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                              <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br" style="border-color: #800893;">
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Senha:</label>
+                              <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
+                            </div>
+      
+ 
+                            <div class="d-grid gap-2">
+                              <button class="btn btn-primary" id="btEnviar" type="submit" name="submit">Enviar</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
