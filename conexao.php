@@ -12,7 +12,7 @@ try {
     $conexao->exec($sql_banco);
     
     $sql_tabela = "
-    create or TABLE CLIENTE (
+    CREATE TABLE IF NOT EXISTS CLIENTE (
         cd_cliente INT AUTO_INCREMENT PRIMARY KEY,
         nm_cliente VARCHAR (100) NOT NULL,
         cd_telefone_cliente VARCHAR (13) NOT NULL,
