@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
             if ($resultado && password_verify($senha_entrada, $resultado['cd_senha_cliente'])) {
-                header('Location: galvao.php');
+                header('Location: principal.php');
                 exit;
             } else {
                 echo '<div class="container d-flex justify-content-center align-items-center">
