@@ -138,8 +138,7 @@
     </div>
   </div>
 
-      <!-- MODAL LOGIN -->
-      
+      <!-- MODAL LOGIN -->    
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -157,7 +156,7 @@
 
                       </div>
                       <div class="col-md-8">
-                      <form action="redirecionar.php" method="post">
+                      <form action="login.php" method="post">
                           <div class="card-body">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Email:</label>
@@ -193,10 +192,7 @@
         </div>
       </div>
 
-
   <!-- MODAL CADASTRO -->
-
-
   <div class="modal fade" id="ModalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -214,15 +210,19 @@
 
                       </div>
                       <div class="col-md-8">
-                      <form action="redirecionar.php" method="post">
+                      <form action="cadastro.php" method="post">
                           <div class="card-body w-100">
                           <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Nome Completo:</label>
-                              <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br" style="border-color: #800893;">
+                              <input type="text" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br" style="border-color: #800893;">
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">CPF:</label>
-                              <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
+                              <input type="text" name="cpf" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Telefone:</label>
+                              <input type="tel" name="telefone" class="form-control" id="exampleFormControlTextarea1" placeholder="digite seu Telefone" style="border-color: #800893;">                            
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Email:</label>

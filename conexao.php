@@ -12,8 +12,8 @@ try {
     $conexao->exec($sql_banco);
     
     $sql_tabela = "
-    create TABLE CLIENTE (
-        cd_cliente CHAR(10) PRIMARY KEY,
+    create or TABLE CLIENTE (
+        cd_cliente INT AUTO_INCREMENT PRIMARY KEY,
         nm_cliente VARCHAR (100) NOT NULL,
         cd_telefone_cliente VARCHAR (13) NOT NULL,
         nm_email_cliente VARCHAR(100) NOT NULL,

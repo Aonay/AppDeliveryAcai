@@ -14,20 +14,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
             if ($resultado && password_verify($senha_entrada, $resultado['cd_senha_cliente'])) {
+                // Login bem-sucedido, redireciona para a página principal
                 header('Location: principal.php');
                 exit;
             } else {
+                // Senha inválida
                 echo '<div class="container d-flex justify-content-center align-items-center">
                         <p style="color: red;">Usuário ou senha inválidos!</p>
                       </div>';
             }
-
-            $conexao = null;
         } catch (PDOException $e) {
+            // Erro de conexão com o banco de dados
             echo '<div class="container d-flex justify-content-center align-items-center">
                     <p style="color: red;">Erro ao conectar ao banco de dados!</p>
                   </div>';
         }
+    } else {
+        // Campos de email ou senha vazios
+        echo '<div class="container d-flex justify-content-center align-items-center">
+                <p style="color: red;">Por favor, preencha todos os campos!</p>
+              </div>';
     }
 }
+?>
+
 ?>
