@@ -85,38 +85,43 @@
 </div>
 
 
-  <div class="d-flex">
-    <div class="card m-1 " style="width: 100%;">
-      <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
-      <div class="card-body p-1">
-        <h5 class="card-title">Açaí P</h5>
-        <p class="card-text">300g de acaí</p>
-        <div class="row justify-content-center">
-          <div class="col-8">
-            <h2>R$ 15,00</h2>
-          </div>
-          <div class="col-4 ">
-            <a href="#" class="btn btn-danger">+</a>
-          </div>
+<!-- Adicione um identificador único para cada card para facilitar a identificação -->
+<div class="d-flex">
+    <div class="card m-1" style="width: 100%;">
+        <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
+        <div class="card-body p-1">
+            <h5 class="card-title">Açaí Tam. P</h5>
+            <p class="card-text">300g de açaí</p>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h2>R$ 15,00</h2>
+                </div>
+                <div class="col-4">
+                    <!-- Adicione um atributo para identificar o botão de adicionar ao carrinho -->
+                    <a class="btn btn-danger btn-adicionar" data-bs-toggle="modal" data-bs-target="#carrinhoModal"
+                        data-titulo="Açaí Tam. P" data-descricao="300g de açaí" data-preco="R$ 15,00">+</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="card m-1 " style="width: 100%;">
-      <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
-      <div class="card-body p-1">
-        <h5 class="card-title">Açaí P</h5>
-        <p class="card-text">300g de acaí</p>
-        <div class="row justify-content-center">
-          <div class="col-8">
-            <h2>R$ 15,00</h2>
-          </div>
-          <div class="col-4 ">
-            <a href="#" class="btn btn-danger">+</a>
-          </div>
+    <div class="card m-1" style="width: 100%;">
+        <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
+        <div class="card-body p-1">
+            <h5 class="card-title">Açaí Tam. M</h5>
+            <p class="card-text">400g de açaí</p>
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h2>R$ 20,00</h2>
+                </div>
+                <div class="col-4">
+                    <!-- Adicione um atributo para identificar o botão de adicionar ao carrinho -->
+                    <a class="btn btn-danger btn-adicionar" data-bs-toggle="modal" data-bs-target="#carrinhoModal"
+                        data-titulo="Açaí Tam. M" data-descricao="400g de açaí" data-preco="R$ 20,00">+</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
   <div class="container p-2">
     <h3>Especiais</h3>
@@ -193,7 +198,7 @@
       </div>
 
   <!-- MODAL CADASTRO -->
-  <div class="modal fade" id="ModalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ModalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
@@ -214,15 +219,15 @@
                           <div class="card-body w-100">
                           <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Nome Completo:</label>
-                              <input type="text" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br" style="border-color: #800893;">
+                              <input type="text" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome" style="border-color: #800893;">
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">CPF:</label>
-                              <input type="text" name="cpf" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
+                              <input type="text" name="cpf" class="form-control" id="exampleFormControlTextarea1" placeholder="Digite seu CPF" style="border-color: #800893;">                            
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">Telefone:</label>
-                              <input type="tel" name="telefone" class="form-control" id="exampleFormControlTextarea1" placeholder="digite seu Telefone" style="border-color: #800893;">                            
+                              <input type="tel" name="telefone" class="form-control" id="exampleFormControlTextarea1" placeholder="Digite seu Telefone" style="border-color: #800893;">                            
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Email:</label>
@@ -230,7 +235,7 @@
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">Senha:</label>
-                              <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
+                              <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="Digite sua senha" style="border-color: #800893;">                            
                             </div>
       
  
@@ -249,6 +254,124 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+
+        
+  <!-- MODAL CARRINHO -->
+<div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="carrinhoModalLabel">Seu Carrinho</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="content">
+                        <div class="card mb-3" id="card" style="max-width: 540px; border: 0.5px solid; border-radius: 10px; border-color: #800893;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <form id="form" action="carrinho.php" method="post">
+                                        <!-- Campos ocultos para enviar dados para carrinho.php -->
+                                        <input type="hidden" id="modal-titulo" name="titulo">
+                                        <input type="hidden" id="modal-descricao" name="descricao">
+                                        <input type="hidden" id="modal-preco" name="preco">
+                                    </form>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card m-1" style="width: 100%;">
+                                        <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body p-1">
+                                            <h5 name="titulo" class="card-title" id="modal-titulo-view">Açaí TESSSSSSTE</h5>
+                                            <p class="card-text" id="modal-descricao-view">300g de açaí</p>
+                                            <div class="row justify-content-center">
+                                                <div class="col-8">
+                                                    <h2 id="modal-preco-view">R$ 15,00</h2>
+                                                </div>
+                                                <div class="col-7">
+                                                    <ul class="list-group">
+                                                        <li class="list-group-item">
+                                                            <input class="form-check-input me-1" type="checkbox"
+                                                                value="Paçoca" name="item[]" id="firstCheckbox">
+                                                            <label class="form-check-label" for="firstCheckbox">Paçoca</label>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <input class="form-check-input me-1" type="checkbox"
+                                                                value="Amendoim" name="item[]" id="secondCheckbox">
+                                                            <label class="form-check-label" for="secondCheckbox">Amendoim</label>
+                                                        </li>
+                                                        <li class="list-group-item">
+                                                            <input class="form-check-input me-1" type="checkbox"
+                                                                value="Granola" name="item[]" id="thirdCheckbox">
+                                                            <label class="form-check-label" for="thirdCheckbox">Granola</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-primary" id="btEnviar"
+                                            onclick="enviarFormulario()">Confirmar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Obtenha os botões de adicionar ao carrinho
+    var btnAdicionar = document.querySelectorAll('.btn-adicionar');
+
+    // Adicione um ouvinte de evento para cada botão
+    btnAdicionar.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // Obtenha os dados do produto a partir dos atributos de dados
+            var titulo = this.getAttribute('data-titulo');
+            var descricao = this.getAttribute('data-descricao');
+            var preco = this.getAttribute('data-preco');
+
+            // Atualize os campos do modal com os dados do produto selecionado
+            document.getElementById('modal-titulo').value = titulo;
+            document.getElementById('modal-descricao').value = descricao;
+            document.getElementById('modal-preco').value = preco;
+
+            // Atualize os elementos visíveis no modal com os dados do produto selecionado
+            document.getElementById('modal-titulo-view').textContent = titulo;
+            document.getElementById('modal-descricao-view').textContent = descricao;
+            document.getElementById('modal-preco-view').textContent = preco;
+        });
+    });
+
+    // Função para enviar o formulário do modal
+    function enviarFormulario() {
+        document.getElementById('form').submit();
+    }
+</script>
+               
+                            <div class="d-grid gap-2">                              
+                              <input type="submit" class="btn btn-primary" id="btEnviar" name="submit" value="Confirmar"></input>
+                            </div>
+                           
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>

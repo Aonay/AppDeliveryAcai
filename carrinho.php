@@ -23,7 +23,7 @@
             <div class="row justify-content-between">
 
                 <div class="col-4">
-                    <a href="index.php"><button type="button" class="btn btn-light "><i class="bi bi-house-fill">Inicio</i></button></a>
+                    <a href="principal.php"><button type="button" class="btn btn-light "><i class="bi bi-house-fill">Inicio</i></button></a>
                 </div>
 
                 <div class="col-6">
@@ -43,30 +43,35 @@
     <!-- os itens de seleção de produtos devem aparecer na estrutura abaixo atraves do foreach     -->
 
     <?php
-    if ($_POST) {
+if ($_POST) {
+    $titulo = $_POST['titulo'];
+    $descricao = $_POST['descricao'];
+    $preco = $_POST['preco'];
+    $itens = isset($_POST['item']) ? implode(', ', $_POST['item']) : '';
+
+    // Exibindo os itens selecionados no carrinho
     ?>
-        <div class="card text-sm-start m-1 " style="max-height: 100px;">
-            <div class="row">
-                <div class="col">
-                    <img src="./imagens/acai1.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-6">
-                    <h5 class="text-sm-start">Açaí Pequeno</h5>
-                    <p style="font-size: 11px; ">Amendoim,Granola,Paçoca</p>
-                </div>
-                <div class="col">
-                    <h5>VALOR</h5>
-                    <p><b>R$25,00</b></p>
-                </div>
+    <div class="card text-sm-start m-1" style="max-height: 100px;">
+        <div class="row">
+            <div class="col">
+                <img src="./imagens/acai1.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-6">
+                <h5 class="text-sm-start"><?php echo $titulo; ?></h5>
+                <p style="font-size: 11px;"><?php echo $itens; ?></p>
+            </div>
+            <div class="col">
+                <h5>VALOR</h5>
+                <p><b><?php echo $preco; ?></b></p>
             </div>
         </div>
+    </div>
     <?php
+}
+?>
 
-    }
 
-    ?>
-
-    <div class="card text-sm-start m-1 " style="max-height: 100px;">
+    <!-- <div class="card text-sm-start m-1 " style="max-height: 100px;">
         <div class="row">
             <div class="col">
                 <img src="./imagens/acai1.jpg" class="img-fluid rounded-start" alt="...">
@@ -80,8 +85,8 @@
                 <p><b>R$25,00</b></p>
             </div>
         </div>
-    </div>
-    <div class="card text-sm-start m-1 " style="max-height: 100px;">
+    </div> -->
+    <!-- <div class="card text-sm-start m-1 " style="max-height: 100px;">
         <div class="row">
             <div class="col">
                 <img src="./imagens/acai1.jpg" class="img-fluid rounded-start" alt="...">
@@ -95,7 +100,7 @@
                 <p><b>R$25,00</b></p>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="d-flex justify-content-center">
         <div class=" card " style="width: 18rem;">
