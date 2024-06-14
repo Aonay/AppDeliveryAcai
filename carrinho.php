@@ -37,7 +37,7 @@
     </header>
 
     <div class="container m-2">
-        <h1>Carrinho<i class="bi bi-cart-fill"></i></h1>
+        <h1 class="text-center">Carrinho <i class="bi bi-cart-fill"></i></h1>
     </div>
 
     <!-- os itens de seleção de produtos devem aparecer na estrutura abaixo atraves do foreach     -->
@@ -51,14 +51,14 @@ if ($_POST) {
 
     // Exibindo os itens selecionados no carrinho
     ?>
-    <div class="card text-sm-start m-1" style="max-height: 100px;">
+    <div class="card text-sm-start m-1 mt-4" style="max-height: 100px;">
         <div class="row">
             <div class="col">
                 <img src="./imagens/acai1.jpg" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-6">
                 <h5 class="text-sm-start"><?php echo $titulo; ?></h5>
-                <p style="font-size: 11px;"><?php echo $itens; ?></p>
+                <p style="font-size: 14px;"><?php echo $itens; ?></p>
             </div>
             <div class="col">
                 <h5>VALOR</h5>
@@ -68,58 +68,46 @@ if ($_POST) {
     </div>
     <?php
 }
+
+$valor_numerico = floatval(str_replace('R$ ', '', $preco));
+$total = $valor_numerico + 10;
 ?>
 
-
-    <!-- <div class="card text-sm-start m-1 " style="max-height: 100px;">
-        <div class="row">
-            <div class="col">
-                <img src="./imagens/acai1.jpg" class="img-fluid rounded-start" alt="...">
+<div class="d-flex justify-content-center" style="margin-top: 350px">
+    <div class="card mt-5" style="width: 20rem;">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h6 class="card-text m-0">Sub-Total:</h6>
+                <div class="text-end"><?php echo $preco; ?></div>
             </div>
-            <div class="col-6">
-                <h5 class="text-sm-start">Açaí Pequeno</h5>
-                <p style="font-size: 11px; ">Amendoim,Granola,Paçoca</p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h6 class="card-text m-0">Frete:</h6>
+                <div class="text-end">R$ 10,00</div>
             </div>
-            <div class="col">
-                <h5>VALOR</h5>
-                <p><b>R$25,00</b></p>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h6 class="card-text m-0">Cupom-Desconto:</h6>
+                <div class="text-end">R$ 0,00</div>
             </div>
-        </div>
-    </div> -->
-    <!-- <div class="card text-sm-start m-1 " style="max-height: 100px;">
-        <div class="row">
-            <div class="col">
-                <img src="./imagens/acai1.jpg" class="img-fluid rounded-start" alt="...">
+            <hr>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h3 class="card-text m-0">Total:</h3>
+                <h4><div class="text-end">R$ <?php echo $total; ?>,00</div></h4>
             </div>
-            <div class="col-6">
-                <h5 class="text-sm-start">Açaí Pequeno</h5>
-                <p style="font-size: 11px; ">Amendoim,Granola,Paçoca</p>
-            </div>
-            <div class="col">
-                <h5>VALOR</h5>
-                <p><b>R$25,00</b></p>
-            </div>
-        </div>
-    </div> -->
-
-    <div class="d-flex justify-content-center">
-        <div class=" card " style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <div class="text-end"><a href="#" class="btn btn-warning">Go somewhere</a></div>
-            </div>
+            <br>
+            <div class="text-center"><a href="#" class="btn btn-warning">Finalizar pedido</a></div>
         </div>
     </div>
+</div>
+
 
     <div class="container text-center">
   <div class="row">
     <div class="col align-self-start">
-      One of three columns
+      
     </div>
 
     <div class="col align-self-end">
-      One of three columns
+      
     </div>
   </div>
 </div>
