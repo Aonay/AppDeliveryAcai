@@ -50,7 +50,7 @@
 
               <a href="logout.php?nome=exit"><button type="button" name="exit" value="exit" class="btn btn-danger me-2"><i class="bi bi-box-arrow-right"></i></button></a>
 
-            <a href="carrinho.php">
+            <a href="#">
               <button type="button" name="carrinho" class="btn btn-warning"><i class="bi bi-cart-fill"></i></button>
             </a>
             <p style="color: yellow;"><?php echo $email; ?> </p>
@@ -59,7 +59,7 @@
           } else {
           ?>
             <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-circle"></i></button>
-            <a href="carrinho.php">
+            <a href="#">
               <button type="button" name="carrinho" class="btn btn-warning"><i class="bi bi-cart-fill"></i></button>
             </a>
         </div>
