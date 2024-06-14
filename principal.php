@@ -43,10 +43,14 @@
 
         <div class="col-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-circle"></i></button>
           <a href="carrinho.php">
             <button type="button" name="carrinho" class="btn btn-warning"><i class="bi bi-cart-fill"></i></button>
 =======
+=======
+
+>>>>>>> ffae278eaa60f094449cfd7415c64bc0c578d73f
           <?php
           session_start();
           if (isset($_SESSION['usuario'])) {
@@ -67,7 +71,12 @@
             <a href="carrinho.php">
               <button type="button" name="carrinho" class="btn btn-warning"><i class="bi bi-cart-fill"></i></button>
             </a>
+<<<<<<< HEAD
 >>>>>>> sessao
+=======
+
+
+>>>>>>> ffae278eaa60f094449cfd7415c64bc0c578d73f
         </div>
 
       <?php
@@ -288,6 +297,7 @@
   <!--  -->
 
 
+<<<<<<< HEAD
   <!-- MODAL CARRINHO -->
   <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -352,6 +362,8 @@
 
       <!--  -->
 
+=======
+>>>>>>> ffae278eaa60f094449cfd7415c64bc0c578d73f
         
 <!-- MODAL CARRINHO -->
 <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
@@ -412,13 +424,25 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
+                      </div>
                     </div>
+                    <div class="d-grid gap-2">
+                      <button type="button" class="btn btn-primary" id="btEnviar" onclick="enviarFormulario()">Confirmar</button>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+<<<<<<< HEAD
 =======
 >>>>>>> sessao
+=======
+      </div>
+>>>>>>> ffae278eaa60f094449cfd7415c64bc0c578d73f
     </div>
   </div>
 
@@ -451,6 +475,11 @@
       document.getElementById('form').submit();
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ffae278eaa60f094449cfd7415c64bc0c578d73f
 </script>
 
 
@@ -466,9 +495,13 @@
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 =======
   </script>
 >>>>>>> sessao
+=======
+
+>>>>>>> ffae278eaa60f094449cfd7415c64bc0c578d73f
 
   <div class="d-grid gap-2">
     <input type="submit" class="btn btn-primary" id="btEnviar" name="submit" value="Confirmar"></input>
