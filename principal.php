@@ -42,6 +42,7 @@
         </div>
 
         <div class="col-6">
+
           <?php
           session_start();
           if (isset($_SESSION['usuario'])) {
@@ -62,6 +63,8 @@
             <a href="carrinho.php">
               <button type="button" name="carrinho" class="btn btn-warning"><i class="bi bi-cart-fill"></i></button>
             </a>
+
+
         </div>
 
       <?php
@@ -156,7 +159,7 @@
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Barca Especial</h5>
-            <p class="card-text">Aproveite esse combo delicioso, com uma barca montada por voçê + 4 diferentes acaís nos copo!</p>
+            <p class="card-text">Aproveite esse combo delicioso, com uma barca montada por você + 4 diferentes acaís nos copo!</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
@@ -282,53 +285,67 @@
   <!--  -->
 
 
-  <!-- MODAL CARRINHO -->
-  <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModal" aria-hidden="true">
+        
+<!-- MODAL CARRINHO -->
+<div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="carrinhoModalLabel">Seu Carrinho</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container d-flex justify-content-center align-items-center">
-            <div class="content">
-              <div class="card mb-3" id="card" style="max-width: 540px; border: 0.5px solid; border-radius: 10px; border-color: #800893;">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <form id="form" action="carrinho.php" method="post">
-                      <!-- Campos ocultos para enviar dados para carrinho.php -->
-                      <input type="hidden" id="modal-titulo" name="titulo">
-                      <input type="hidden" id="modal-descricao" name="descricao">
-                      <input type="hidden" id="modal-preco" name="preco">
-                    </form>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card m-1" style="width: 100%;">
-                      <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body p-1">
-                        <h5 name="titulo" class="card-title" id="modal-titulo-view">Açaí TESSSSSSTE</h5>
-                        <p class="card-text" id="modal-descricao-view">300g de açaí</p>
-                        <div class="row justify-content-center">
-                          <div class="col-8">
-                            <h2 id="modal-preco-view">R$ 15,00</h2>
-                          </div>
-                          <div class="col-7">
-                            <ul class="list-group">
-                              <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="Paçoca" name="item[]" id="firstCheckbox">
-                                <label class="form-check-label" for="firstCheckbox">Paçoca</label>
-                              </li>
-                              <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="Amendoim" name="item[]" id="secondCheckbox">
-                                <label class="form-check-label" for="secondCheckbox">Amendoim</label>
-                              </li>
-                              <li class="list-group-item">
-                                <input class="form-check-input me-1" type="checkbox" value="Granola" name="item[]" id="thirdCheckbox">
-                                <label class="form-check-label" for="thirdCheckbox">Granola</label>
-                              </li>
-                            </ul>
-                          </div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="carrinhoModalLabel">Seu Carrinho</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container d-flex justify-content-center align-items-center">
+                    <div class="content">
+                        <div class="card mb-3" id="card" style="max-width: 540px; border: 0.5px solid; border-radius: 10px; border-color: #800893;">
+                            <div class="row g-0">
+                                <div class="col-md-8 p-3">
+                                    <div class="card m-1" style="width: 100%;">
+                                        <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
+                                        <div class="card-body p-1">
+                                            <h5 name="titulo" class="card-title" id="modal-titulo-view"></h5>
+                                            <p class="card-text" id="modal-descricao-view"></p>
+                                            <div class="row justify-content-center">
+                                                <div class="col-10">
+                                                    <h2 id="modal-preco-view"></h2>
+                                                    <form id="form" action="carrinho.php" method="post">
+                                        <!-- Campos ocultos para enviar dados para carrinho.php -->
+                                        <input type="hidden" id="modal-titulo" name="titulo">
+                                        <input type="hidden" id="modal-descricao" name="descricao">
+                                        <input type="hidden" id="modal-preco" name="preco">
+                                        
+                                        <!-- Incluindo as checkboxes já existentes -->
+                                        <div class="col-7">
+                                            <ul class="list-group ">
+                                                <li class="list-group-item border border-0">
+                                                    <input class="form-check-input me-1" type="checkbox"
+                                                        value="Paçoca" name="item[]" id="firstCheckbox">
+                                                    <label class="form-check-label" for="firstCheckbox">Paçoca</label>
+                                                </li>
+                                                <li class="list-group-item border border-0">
+                                                    <input class="form-check-input me-1" type="checkbox"
+                                                        value="Amendoim" name="item[]" id="secondCheckbox">
+                                                    <label class="form-check-label" for="secondCheckbox">Amendoim</label>
+                                                </li>
+                                                <li class="list-group-item border border-0">
+                                                    <input class="form-check-input me-1" type="checkbox"
+                                                        value="Granola" name="item[]" id="thirdCheckbox">
+                                                    <label class="form-check-label" for="thirdCheckbox">Granola</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-primary" id="btEnviar" onclick="enviarFormulario()">Confirmar</button>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                       </div>
                     </div>
@@ -373,7 +390,24 @@
     function enviarFormulario() {
       document.getElementById('form').submit();
     }
-  </script>
+
+
+</script>
+
+
+               
+                            <div class="d-grid gap-2">                              
+                              <input type="submit" class="btn btn-primary" id="btEnviar" name="submit" value=""></input>
+                            </div>
+                           
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 
   <div class="d-grid gap-2">
     <input type="submit" class="btn btn-primary" id="btEnviar" name="submit" value="Confirmar"></input>
