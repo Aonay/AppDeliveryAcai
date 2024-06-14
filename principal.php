@@ -85,18 +85,18 @@
 </div>
 
 
-  <div class="d-flex">
+<div class="d-flex">
     <div class="card m-1 " style="width: 100%;">
       <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
       <div class="card-body p-1">
-        <h5 class="card-title">Açaí P</h5>
+        <h5 class="card-title">Açaí aaaaaaa</h5>
         <p class="card-text">300g de acaí</p>
         <div class="row justify-content-center">
           <div class="col-8">
             <h2>R$ 15,00</h2>
           </div>
           <div class="col-4 ">
-            <a href="#" class="btn btn-danger">+</a>
+            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#carrinhoModal">+</a>
           </div>
         </div>
       </div>
@@ -104,14 +104,14 @@
     <div class="card m-1 " style="width: 100%;">
       <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
       <div class="card-body p-1">
-        <h5 class="card-title">Açaí P</h5>
+        <h5 class="card-title">Açaí testeteste</h5>
         <p class="card-text">300g de acaí</p>
         <div class="row justify-content-center">
           <div class="col-8">
             <h2>R$ 15,00</h2>
           </div>
           <div class="col-4 ">
-            <a href="#" class="btn btn-danger">+</a>
+            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#carrinhoModal">+</a>
           </div>
         </div>
       </div>
@@ -138,7 +138,8 @@
     </div>
   </div>
 
-      <!-- MODAL LOGIN -->    
+<!-- MODAL LOGIN -->
+      
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -156,7 +157,7 @@
 
                       </div>
                       <div class="col-md-8">
-                      <form action="login.php" method="post">
+                      <form action="redirecionar.php" method="post">
                           <div class="card-body">
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Email:</label>
@@ -192,7 +193,10 @@
         </div>
       </div>
 
-  <!-- MODAL CADASTRO -->
+
+<!-- MODAL CADASTRO -->
+
+
   <div class="modal fade" id="ModalCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -210,19 +214,15 @@
 
                       </div>
                       <div class="col-md-8">
-                      <form action="cadastro.php" method="post">
+                      <form action="redirecionar.php" method="post">
                           <div class="card-body w-100">
                           <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Nome Completo:</label>
-                              <input type="text" name="nome" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br" style="border-color: #800893;">
+                              <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="exemplo@email.com.br" style="border-color: #800893;">
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">CPF:</label>
-                              <input type="text" name="cpf" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
-                            </div>
-                            <div class="mb-3">
-                              <label for="exampleFormControlTextarea1" class="form-label">Telefone:</label>
-                              <input type="tel" name="telefone" class="form-control" id="exampleFormControlTextarea1" placeholder="digite seu Telefone" style="border-color: #800893;">                            
+                              <input type="password" name="senha" class="form-control" id="exampleFormControlTextarea1" placeholder="digite sua senha" style="border-color: #800893;">                            
                             </div>
                             <div class="mb-3">
                               <label for="exampleFormControlInput1" class="form-label">Email:</label>
@@ -249,6 +249,92 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+
+        
+<!-- MODAL CARRINHO -->
+  <div class="modal fade" id="carrinhoModal" tabindex="-1" aria-labelledby="carrinhoModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="carrinhoModal">Seu Carrinho</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="container d-flex justify-content-center align-items-center">
+                <div class="content">
+                  <div class="card mb-3" id="card" style="max-width: 540px; border: 0.5px solid; border-radius: 10px;  border-color: #800893;">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                    <form id="form" action="carrinho.php" method="post">
+                      </div>
+                      <div class="col-md-8">
+                      <div class="card m-1 " style="width: 100%;">
+                          <img src="imagens/acai1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body p-1">
+                            <h5 name="titulo" class="card-title">Açaí TESSSSSSTE</h5>
+                     
+                            <p class="card-text">300g de acaí</p>
+                            <div class="row justify-content-center">
+                              <div class="col-8">
+                                <h2>R$ 15,00</h2>
+                              </div>
+                              <div class="col-7 ">
+                              <ul class="list-group">
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="checkbox" name="item[]" value="Paçoca" id="firstCheckbox">
+                                      <label class="form-check-label" for="firstCheckbox">Paçoca</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="checkbox" name="item[]" value="Amendoim" id="secondCheckbox">
+                                      <label class="form-check-label" for="secondCheckbox">Amendoim</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                      <input class="form-check-input me-1" type="checkbox" name="item[]" value="Granola" id="thirdCheckbox">
+                                      <label class="form-check-label" for="thirdCheckbox">Granola</label>
+                                    </li>
+                                  </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <input type="hidden" id="titulo" name="titulo">
+                        <input type="hidden" id="descricao" name="descricao">
+                        <input type="hidden" id="preco" name="preco">
+
+                              <script>
+                                // Obtenha os elementos HTML
+                                var tituloElement = document.querySelector('.card-title');
+                                var descricaoElement = document.querySelector('.card-text');
+                                var precoElement = document.querySelector('.col-8 h2');
+
+                                // Atribua os valores dos elementos aos campos de entrada ocultos
+                                    document.getElementById('form').addEventListener('submit', function() {
+                                    document.getElementById('titulo').value = tituloElement.textContent;
+                                    document.getElementById('descricao').value = descricaoElement.textContent;
+                                    document.getElementById('preco').value = precoElement.textContent;
+                                });
+                              </script>
+               
+                            <div class="d-grid gap-2">                              
+                              <input type="submit" class="btn btn-primary" id="btEnviar" name="submit" value="Confirmar"></input>
+                            </div>
+                           
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>
