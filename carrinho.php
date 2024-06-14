@@ -118,7 +118,7 @@ $total = $valor_numerico + 10;
                 <h4><div class="text-end">R$ <?php echo $total; ?>,00</div></h4>
             </div>
             <br>
-            <div class="text-center"><a href="#" class="btn btn-warning">Finalizar pedido</a></div>
+            <div class="text-center"><a href="finalizar.php" class="btn btn-warning">Finalizar pedido</a></div>
         </div>
     </div>
 </div>
