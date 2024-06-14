@@ -11,17 +11,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $conexao->prepare($sql);
             $stmt->bindParam(':email', $email);
             $stmt->execute();
+            
 
             $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
             if ($resultado && password_verify($senha_entrada, $resultado['cd_senha_cliente'])) {
                 // Login bem-sucedido, redireciona para a página principal
+                
+                session_start();
+                $_SESSION['usuario']=$email;
                 header('Location: principal.php');
                 exit;
             } else {
                 // Senha inválida
-                echo '<div class="container d-flex justify-content-center align-items-center">
-                        <p style="color: red;">Usuário ou senha inválidos!</p>
-                      </div>';
+                header('Location: principal.php');
+                ?>
+                <script> alert("Login ou senha invalidos!") </script>
+                <?php
             }
         } catch (PDOException $e) {
             // Erro de conexão com o banco de dados
